@@ -7,7 +7,7 @@ const Therapist = () => {
   const [type, setType] = useState("");
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/type`)
+      .get(`https://unwind-33jwa3mpb-krish1718s-projects.vercel.app/type`)
       .then(function(response) {
         setType(response.data);
       })

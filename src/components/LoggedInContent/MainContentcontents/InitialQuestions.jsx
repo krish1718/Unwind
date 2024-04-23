@@ -31,7 +31,7 @@ const InitialQuestions = ({ setinitialquestions }) => {
     if (fname && dob && gender && med && clicked) {
       setAdminUsername(type);
       axios
-        .post("http://localhost:5000/survey", {
+        .post("https://unwind-33jwa3mpb-krish1718s-projects.vercel.app/survey", {
           fname: fname,
           dob: dob,
           gender: gender,
