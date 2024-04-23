@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://unwind-ruby.vercel.app"],
+        origin: ["https://unwind-ruby.vercel.app", "http://localhost:3000"],
         methods: ["POST", "GET"],
         credentials: true
     }
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // MONGOOSE
 mongoose.set('strictQuery', true);
-mongoose.connect("mongodb+srv://Rishab829:Kanchan%401@expresstry.wqhmyb0.mongodb.net/prac?retryWrites=true&w=majority", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://ramd2054:Mongo123456@cluster0.bouhclr.mongodb.net/", {useNewUrlParser: true});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -68,7 +68,7 @@ app.post('/login', (req, res)=>{
           console.log('acc found');
           console.log(username);
           const data = true;
-          res.json(data);
+          res.status(200).send(data);
       }
   });
 })

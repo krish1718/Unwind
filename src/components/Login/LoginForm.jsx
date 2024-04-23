@@ -32,11 +32,16 @@ export const LoginForm = ({ setLoginView }) => {
     if (username && password){
       console.log(username, password);
       axios
-        .post("https://unwind-api.vercel.app/signup", {
+        .post("http://localhost:5000/signup", {
           username: username,
           password: password,
         })
-        .then((response) => console.log("hii"))
+        .then((response) => {
+          console.log("hii");
+          console.log(response);
+          // <Navigate to="/" replace={true} />;
+          setLogIn(false);
+        })
         .catch((error) => {
           console.log(error);
         });
@@ -47,7 +52,7 @@ export const LoginForm = ({ setLoginView }) => {
   useEffect(() => {
     if (username && password)
       axios
-        .post("https://unwind-api.vercel.app/login", {
+        .post("http://localhost:5000/login", {
           username: username,
           password: password,
         })
@@ -152,7 +157,7 @@ export const LoginForm = ({ setLoginView }) => {
                   Welcome to Unwind
                 </h4>
               </div>
-              <form action="https://unwind-api.vercel.app/login" method="post">
+              <form action="http://localhost:5000/login" method="post">
                 <p className="text-lg my-3 text-center">
                   Please login to your account
                 </p>
