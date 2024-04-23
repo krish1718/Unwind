@@ -31,9 +31,9 @@ var authSchema = new mongoose.Schema({
 //Model
 var Log = mongoose.model('Log', authSchema);
 
-// app.get("/", (req, res) => {
-  
-// });
+app.get("/", (req, res) => {
+  res.send("Hello world");
+});
 
 app.post("/signup", (req, res) => {
   console.log(req.body);
