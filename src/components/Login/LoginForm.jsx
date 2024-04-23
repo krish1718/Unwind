@@ -32,7 +32,7 @@ export const LoginForm = ({ setLoginView }) => {
     if (username && password){
       console.log(username, password);
       axios
-        .post("http://localhost:5000/signup", {
+        .post("https://unwind-api.vercel.app/signup", {
           username: username,
           password: password,
         })
@@ -52,7 +52,7 @@ export const LoginForm = ({ setLoginView }) => {
   useEffect(() => {
     if (username && password)
       axios
-        .post("http://localhost:5000/login", {
+        .post("https://unwind-api.vercel.app/login", {
           username: username,
           password: password,
         })
@@ -157,7 +157,7 @@ export const LoginForm = ({ setLoginView }) => {
                   Welcome to Unwind
                 </h4>
               </div>
-              <form action="http://localhost:5000/login" method="post">
+              <form action="https://unwind-api.vercel.app/login" method="post">
                 <p className="text-lg my-3 text-center">
                   Please login to your account
                 </p>
