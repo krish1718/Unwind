@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // MONGOOSE
 mongoose.set('strictQuery', true);
-mongoose.connect("mongodb+srv://ramd2054:Mongo123456@cluster0.bouhclr.mongodb.net/", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://ramd2054:Mongo123456@cluster0.bouhclr.mongodb.net/prac?retryWrites=true&w=majority", {useNewUrlParser: true});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
