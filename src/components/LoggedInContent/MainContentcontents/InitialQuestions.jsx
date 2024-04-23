@@ -31,7 +31,7 @@ const InitialQuestions = ({ setinitialquestions }) => {
     if (fname && dob && gender && med && clicked) {
       setAdminUsername(type);
       axios
-        .post("https://unwind-33jwa3mpb-krish1718s-projects.vercel.app/survey", {
+        .post("https://unwind-api.vercel.app/survey", {
           fname: fname,
           dob: dob,
           gender: gender,

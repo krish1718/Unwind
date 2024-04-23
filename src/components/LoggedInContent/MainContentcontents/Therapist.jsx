@@ -7,7 +7,7 @@ const Therapist = () => {
   const [type, setType] = useState("");
   useEffect(() => {
     axios
-      .get(`https://unwind-33jwa3mpb-krish1718s-projects.vercel.app/type`)
+      .get(`https://unwind-api.vercel.app/type`)
       .then(function(response) {
         setType(response.data);
       })

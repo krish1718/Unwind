@@ -19,7 +19,7 @@ const Community = () => {
   useEffect(() => {
     if (message) {
       axios
-        .post(`https://unwind-33jwa3mpb-krish1718s-projects.vercel.app/community?chat=${groupname}`, {
+        .post(`https://unwind-api.vercel.app/community?chat=${groupname}`, {
           username: username,
           message: message,
         })
@@ -31,7 +31,7 @@ const Community = () => {
 
   useEffect(() => {
     axios
-      .get(`https://unwind-33jwa3mpb-krish1718s-projects.vercel.app/community?chat=${groupname}`)
+      .get(`https://unwind-api.vercel.app/community?chat=${groupname}`)
       .then(function(response) {
         setArray(response.data);
         console.log(response.data);
@@ -44,7 +44,7 @@ const Community = () => {
   useEffect(() => {
     setTimeout(() => {
       axios
-        .get(`https://unwind-33jwa3mpb-krish1718s-projects.vercel.app/community?chat=${groupname}`)
+        .get(`https://unwind-api.vercel.app/community?chat=${groupname}`)
         .then(function(response) {
           // alert('done')
           setArray(response.data);

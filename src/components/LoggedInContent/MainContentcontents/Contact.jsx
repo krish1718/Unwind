@@ -12,7 +12,7 @@ const Contact = () => {
     if (name && email && message){
       console.log(name, email, message);
       axios
-        .post("https://unwind-33jwa3mpb-krish1718s-projects.vercel.app/contact", {
+        .post("https://unwind-api.vercel.app/contact", {
           name: name,
           email: email,
           message:message

@@ -6,7 +6,13 @@ const cors = require("cors");
 const port = 5000;
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://unwind-api.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 // EXPRESS
 app.use('/static', express.static('static'));
