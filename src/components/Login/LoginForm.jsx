@@ -267,7 +267,7 @@ export const LoginForm = ({ setLoginView }) => {
                     <div
                       onClick={() => {
                         // navigator.vibrate(50);
-                        setLogIn(true);
+                        setLogIn(false);
                       }}
                       className="hover:underline text-red-500 cursor-pointer"
                     >
